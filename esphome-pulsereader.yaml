@@ -43,12 +43,14 @@ sensor:
         pullup: true
     unit_of_measurement: 'W'
     name: 'Power Meter HP House'
+    device_class: power
     filters:
       - multiply: 60  # (60s/1000 pulses per kWh)
 
     total:
       unit_of_measurement: 'Wh'
       name: 'Energy Meter HP House'
+      device_class: energy
       filters:
         - multiply: 1  # (1000 pulses per kWh)
 
